@@ -19,7 +19,7 @@ spring:
             - Path=/api/v1/inventory/**
           filters:
             - StripPrefix=2
-            - AddRequestHeader=X-Custom-Header, Anuj
+            - AddRequestHeader=X-Custom-Header, Ashish
 eureka:
   client:
     service-url:
