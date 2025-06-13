@@ -8,6 +8,8 @@ import com.codingshuttle.ecommerce.inventory_service.repository.ProductRepositor
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,9 +17,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@Slf4j
 public class ProductService {
-
+    private static final Logger log = LoggerFactory.getLogger(ProductService.class);
     private final ProductRepository productRepository;
     private final ModelMapper modelMapper;
 
