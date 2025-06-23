@@ -8,7 +8,6 @@ import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFac
 import org.springframework.stereotype.Component;
 
 @Component
-@Slf4j
 public class LoggingOrdersFilter extends AbstractGatewayFilterFactory<LoggingOrdersFilter.Config> {
     private static final Logger log = LoggerFactory.getLogger(LoggingOrdersFilter.class);
 

@@ -30,8 +30,8 @@ public class AuthenticationGatewayFilterFactory extends AbstractGatewayFilterFac
                 exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
                 return exchange.getResponse().setComplete();
             }
-//            String token = authorizationHeader.substring(7);
-            String token = authorizationHeader.split("Bearer ")[1];
+            String token = authorizationHeader.substring(7);
+//            String token = authorizationHeader.split("Bearer ")[1];
 
             Long userId = jwtService.getUserIdFromToken(token);
 

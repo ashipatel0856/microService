@@ -3,9 +3,17 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>15889</IntrospectionStateNumber>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G</Grants>
+      <IntrospectionStateNumber>15946</IntrospectionStateNumber>
       <ServerVersion>17.2</ServerVersion>
-      <StartupTime>1749482776</StartupTime>
+      <StartupTime>1749787595</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -815,7 +823,7 @@ false Zulu
 14704||10|C|G
 14704||-9223372036854775808|U|G
 14704||10|U|G</Grants>
-      <IntrospectionStateNumber>15883</IntrospectionStateNumber>
+      <IntrospectionStateNumber>15946</IntrospectionStateNumber>
       <ObjectId>67756</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -829,7 +837,6 @@ false Zulu
 14704||10|C|G
 14704||-9223372036854775808|U|G
 14704||10|U|G</Grants>
-      <IntrospectionStateNumber>15889</IntrospectionStateNumber>
       <ObjectId>67782</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -845,7 +852,6 @@ false Zulu
 14704||10|C|G
 14704||-9223372036854775808|U|G
 14704||10|U|G</Grants>
-      <IntrospectionStateNumber>15876</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4283,8 +4289,8 @@ false Zulu
     <schema id="274" parent="6" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>15883</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-06-09.16:47:45</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>15946</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-06-13.04:30:36</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -7640,7 +7646,6 @@ false Zulu
     <schema id="518" parent="7" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>15889</IntrospectionStateNumber>
       <LastIntrospectionLocalTimestamp>2025-06-09.16:48:12</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
@@ -7655,10 +7660,10 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="520" parent="274" name="products_id_seq">
-      <ObjectId>67763</ObjectId>
+      <ObjectId>83594</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>9559</StateNumber>
+      <StateNumber>15927</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
@@ -7669,8 +7674,8 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="522" parent="274" name="products">
-      <ObjectId>67764</ObjectId>
-      <StateNumber>9560</StateNumber>
+      <ObjectId>83595</ObjectId>
+      <StateNumber>15927</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -7749,52 +7754,46 @@ false Zulu
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>9559</StateNumber>
+      <StateNumber>15927</StateNumber>
       <StoredType>bigint|0s</StoredType>
-      <SequenceId>67763</SequenceId>
+      <SequenceId>83594</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="534" parent="522" name="price">
+    <column id="534" parent="522" name="name">
       <Position>2</Position>
-      <StateNumber>9559</StateNumber>
+      <StateNumber>15927</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="535" parent="522" name="price">
+      <Position>3</Position>
+      <StateNumber>15927</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="535" parent="522" name="stock">
-      <Position>3</Position>
-      <StateNumber>9559</StateNumber>
+    <column id="536" parent="522" name="stock">
+      <Position>4</Position>
+      <StateNumber>15927</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="536" parent="522" name="title">
-      <Position>4</Position>
-      <StateNumber>9559</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="537" parent="522" name="name">
-      <Position>5</Position>
-      <StateNumber>9560</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="538" parent="522" name="products_pkey">
+    <index id="537" parent="522" name="products_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>67767</ObjectId>
+      <ObjectId>83598</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>9559</StateNumber>
+      <StateNumber>15927</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="539" parent="522" name="products_pkey">
+    <key id="538" parent="522" name="products_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>67768</ObjectId>
+      <ObjectId>83599</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>9559</StateNumber>
-      <UnderlyingIndexId>67767</UnderlyingIndexId>
+      <StateNumber>15927</StateNumber>
+      <UnderlyingIndexId>83598</UnderlyingIndexId>
     </key>
-    <column id="540" parent="525" name="id">
+    <column id="539" parent="525" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -7803,32 +7802,32 @@ false Zulu
       <SequenceId>67783</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="541" parent="525" name="product_id">
+    <column id="540" parent="525" name="product_id">
       <Position>2</Position>
       <StateNumber>9608</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="542" parent="525" name="quantity">
+    <column id="541" parent="525" name="quantity">
       <Position>3</Position>
       <StateNumber>9608</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="543" parent="525" name="order_id">
+    <column id="542" parent="525" name="order_id">
       <Position>4</Position>
       <StateNumber>9608</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="544" parent="525" name="fkt4dc2r9nbvbujrljv3e23iibt">
+    <foreign-key id="543" parent="525" name="fkt4dc2r9nbvbujrljv3e23iibt">
       <ColNames>order_id</ColNames>
       <ObjectId>67796</ObjectId>
       <StateNumber>9610</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>67790</RefTableId>
     </foreign-key>
-    <index id="545" parent="525" name="order_item_pkey">
+    <index id="544" parent="525" name="order_item_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>67787</ObjectId>
@@ -7837,20 +7836,20 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="546" parent="525" name="order_item_pkey">
+    <key id="545" parent="525" name="order_item_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>67788</ObjectId>
       <Primary>1</Primary>
       <StateNumber>9608</StateNumber>
       <UnderlyingIndexId>67787</UnderlyingIndexId>
     </key>
-    <check id="547" parent="526" name="orders_order_status_check">
+    <check id="546" parent="526" name="orders_order_status_check">
       <ColNames>order_status</ColNames>
       <ObjectId>67793</ObjectId>
       <Predicate>(order_status)::text = ANY ((ARRAY[&apos;CONFIRMED&apos;::character varying, &apos;CANCELLED&apos;::character varying, &apos;PENDING&apos;::character varying, &apos;DELIVERED&apos;::character varying])::text[])</Predicate>
       <StateNumber>9609</StateNumber>
     </check>
-    <column id="548" parent="526" name="id">
+    <column id="547" parent="526" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -7859,20 +7858,20 @@ false Zulu
       <SequenceId>67789</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="549" parent="526" name="order_status">
+    <column id="548" parent="526" name="order_status">
       <Position>2</Position>
       <StateNumber>9609</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="550" parent="526" name="price">
+    <column id="549" parent="526" name="price">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>9609</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <index id="551" parent="526" name="orders_pkey">
+    <index id="550" parent="526" name="orders_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>67794</ObjectId>
@@ -7881,7 +7880,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="552" parent="526" name="orders_pkey">
+    <key id="551" parent="526" name="orders_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>67795</ObjectId>
       <Primary>1</Primary>
